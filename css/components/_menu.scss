@@ -1,0 +1,126 @@
+.menu {
+    @include atSmall {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-end;
+        margin-right: -1.25rem;
+    }
+    &__item {
+        flex-grow: 1;
+        position: relative;
+    }
+    &__link {
+        font-family: $bld;
+        font-size: 1.333rem;
+        line-height: 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1.333rem 2.5rem;
+        transition: all .25s;
+        height: 100%;
+        background-color: $color-secondary;
+        position: relative;
+        @include linkStates($color-white, none);
+        @include atSmall {
+            padding: 1.875rem 1.25rem;
+            font-size: 1.125rem;
+            line-height: 1.875rem;
+            display: inline-flex;
+            justify-content: center;
+            background-color: inherit;
+        }
+        &-icon {
+            font-size: 5rem;
+            color: $color-primary;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            @include atSmall {
+                font-size: 2.1875rem;
+                color: $color-white;
+                position: static;
+                transform: none;
+            }
+            &--primary {
+                color: $color-primary;
+            }
+        }
+        &:hover {
+            background-color: $color-secondary-dark;
+            @include atSmall {
+                background-color: $color-primary-dark;
+            }
+        }
+    }
+    &--inner {
+        background-color: $color-secondary;
+        display: none;
+        @include atSmall {
+            position: absolute;
+            z-index: 3;
+            bottom: 0;
+            right: 1.25rem;
+            transform: translateY(100%);
+            width: 18.125rem;
+        }
+        .menu {
+            &__item {
+                & + .menu__item {
+                    @include atSmall {
+                        border-top: 1px solid $color-secondary-light;
+                    }
+                }
+            }
+            &__link {
+                font-family: $reg;
+                display: flex;
+                justify-content: space-between;
+                padding: 1.333rem 1.333rem 1.333rem 4.167rem;
+                @include atSmall {
+                    padding: 1rem 1rem 1rem 1.875rem;
+                }
+                &:hover {
+                    background-color: $color-secondary-dark;
+                    .menu__link-label {
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+            &--inner {
+                background-color: $color-bg-menu-inner-secondary;
+                @include atSmall {
+                    left: 0;
+                    bottom: auto;
+                    top: 10px;
+                    transform: translateX(100%);
+                    border-radius: 2.5px;
+                }
+                .menu__item {
+                    & + .menu__item {
+                        border-top: 0;
+                    }
+                }
+                .menu__link {
+                    background-color: $color-bg-menu-inner-secondary;
+                    &:first-child {
+                        @include atSmall {
+                            border-top-left-radius: 2.5px;
+                            border-top-right-radius: 2.5px;
+                        }
+                    }
+                    &:last-child {
+                        @include atSmall {
+                            border-bottom-left-radius: 2.5px;
+                            border-bottom-right-radius: 2.5px;
+                        }
+                    }
+                    &:hover {
+                        background-color: $color-bg-menu-inner-secondary-dark;
+                    }
+                }
+            }
+        }
+    }
+}

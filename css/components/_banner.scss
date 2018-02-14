@@ -1,0 +1,42 @@
+.banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    text-align: center;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    @include atSmall {
+        max-height: 520px;
+    }
+    &:focus {
+        outline: none;
+    }
+    &__copy {
+        width: 90%;
+        margin: 0 auto;
+        @include atSmall {
+            width: 50%;
+        }
+        &--big {
+            @include atSmall {
+                width: 80%;
+            }
+        }
+        &--slider {
+            width: 100%;
+            align-self: flex-end;
+            background-color: $color-text-dark;
+            padding: 2.0833rem 15px;
+            @include atSmall {
+                background-color: transparent;
+                align-self: center;
+                padding: 0;
+                width: inherit;
+                width: 80%;
+            }
+        }
+    }
+}

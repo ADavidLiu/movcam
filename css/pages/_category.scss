@@ -1,0 +1,38 @@
+.section-category {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-title {
+            font-size: 1.5rem;
+            @include atSmall {
+                font-size: 2.1875rem;
+            }
+        }
+        &-action {
+            flex-grow: 1;
+        }
+    }
+    &__products {
+        &-group {
+            @include atSmall {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+        }
+        &-item {
+            @include atSmall {
+                flex-grow: 1;
+                flex-basis: 0;
+            }
+            & + & {
+                margin-top: 3.333rem;
+                @include atSmall {
+                    margin-top: 0;
+                    margin-left: 1.25rem;
+                }
+            }
+        }
+    }
+}

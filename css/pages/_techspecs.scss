@@ -1,0 +1,58 @@
+.section-techspecs {
+    &__imgs {
+        margin-bottom: 3.333rem;
+        @include atSmall {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            order: 2;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+    &__img-wrapper {
+        text-align: center;
+        @include atSmall {
+            width: 50%;
+        }
+        & + & {
+            margin-top: 3.333rem;
+            @include atSmall {
+                margin-top: 0;
+                margin-left: 6.25rem;
+            }
+        }
+    }
+    &__img {
+        max-width: 100%;
+        height: auto;
+    }
+    &__header {
+        @include atSmall {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+    }
+    &__intro {
+        margin-bottom: 3.333rem;
+        @include atSmall {
+            order: 1;
+            margin-bottom: 0;
+        }
+    }
+    &__downloads {
+        &-group {
+            border-bottom: 1px solid $color-border-light;
+            &:first-of-type {
+                border-top: 1px solid $color-border-light;
+            }
+        }
+        .section-techspecs__data-item {
+            & + .section-techspecs__data-item {
+                margin-top: 10px;
+            }
+        }
+    }
+}

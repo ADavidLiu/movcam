@@ -1,0 +1,70 @@
+.cta {
+    min-height: 3.75rem;
+    max-width: 145px;
+    font-family: $reg;
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.5px;
+    color: $color-white;
+    background-color: $color-text-gray-light;
+    letter-spacing: 0.1em;
+    @include linkStates($color-white, none);
+    @include atSmall {
+        width: 9.0625rem;
+        min-height: 3.125rem;
+        font-size: 1rem;
+        letter-spacing: 0.1em;
+    }
+    &__icon {
+        margin-left: 10px;
+    }
+    &--icon {
+        max-width: none;
+        padding: 0 1.667rem;
+        @include atSmall {
+            max-width: 250px;
+            width: 15.625rem;
+            padding: 0 1.25rem;
+        }
+    }
+    &--color-primary {
+        color: $color-primary;
+        @include linkStates($color-primary, none);
+    }
+    &--primary {
+        background-color: $color-primary;
+    }
+    &--text-bold {
+        font-family: $bld;
+    }
+    &--tertiary {
+        border: 1px solid $color-primary;
+        background-color: transparent;
+        &-white {
+            border-color: $color-white;
+        }
+    }
+    &--shorter {
+        min-width: 0;
+        max-width: none;
+        width: auto;
+        padding: 0 2.0833rem;
+        @include atSmall {
+            padding: 0 1.5625rem;
+        }
+    }
+    &--longer {
+        max-width: none;
+        width: 100%;
+        @include atSmall {
+            width: auto;
+            padding: 0 4.375rem;
+        }
+    }
+    &--half {
+        width: 50%;
+        max-width: none;
+    }
+}

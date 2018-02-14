@@ -1,0 +1,23 @@
+.breadcrumbs {
+    display: none;
+    @include atSmall {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__item {
+        position: relative;
+        & + & {
+            &:before {
+                content: ">";
+                margin: 0 5px;
+                color: $color-text-gray-light;
+            }
+        }
+        &:last-child {
+            .breadcrumbs__link {
+                text-decoration: underline;
+            }
+        }
+    }
+}

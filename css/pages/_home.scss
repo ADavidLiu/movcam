@@ -1,0 +1,106 @@
+.section-products {
+    border-top: 5px solid $color-text-dark;
+    box-shadow: 5.353px 5.945px 6.58px 0.42px rgba(0, 0, 0, 0.27);
+    @include atSmall {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    &__item {
+        height: auto;
+        border: 3px solid $color-text-dark;
+        background-color: $color-secondary;
+        @include atSmall {
+            flex-grow: 1;
+            flex-basis: 0;
+            height: 15.625rem;
+            border: 0;
+        }
+        .article-box__copy {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            background-color: transparent;
+            @include atSmall {
+                background-color: $color-secondary-lighter;
+                position: absolute;
+                padding: 0;
+                background-color: transparent;
+                left: 1.25rem;
+                bottom: 1.25rem;
+            }
+        }
+    }
+}
+
+.slider-news {
+    position: relative;
+    &__arrow {
+        font-size: 4rem;
+        color: $color-text-gray-light;
+        position: absolute;
+        z-index: 2;
+        transform: translateY(-27%);
+        cursor: pointer;
+        @include atSmall {
+            font-size: 3rem;
+            top: 50%;
+        }
+        &--prev {
+            @include atSmall {
+                transform: translate(-100%, -50%);
+                left: -2.5rem;
+            }
+        }
+        &--next {
+            @include atSmall {
+                transform: translate(100%, -50%);
+                right: -2.5rem;
+            }
+        }
+    }
+    .slick {
+        &-dots {
+            position: absolute;
+            z-index: 2;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -65%);
+            @include atSmall {
+                top: auto;
+                bottom: 1.875rem;
+                transform: translateX(-50%);
+            }
+            li {
+                cursor: pointer;
+                float: left;
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                border: 1px solid $color-text-gray-light;
+                transition: all .25s;
+                &.slick-active {
+                    background-color: $color-white;
+                    border-color: $color-white;
+                }
+                & + li {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    &__content {
+        padding: 0;
+        @include atSmall {
+            padding: 0 15px;
+        }
+    }
+    &__item {
+        margin: 0 10px;
+    }
+    .slick {
+        &-list {
+            margin: 0 -10px;
+        }
+    }
+}

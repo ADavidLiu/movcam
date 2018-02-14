@@ -1,0 +1,62 @@
+.header {
+    background-color: $color-primary;
+    &__content {
+        padding: 0;
+        @include atSmall {
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__controls {
+        padding: 2.333rem 15px 1.833rem 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include atSmall {
+            display: block;
+            padding: 0;
+        }
+    }
+    &__btn {
+        appearance: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        @include atSmall {
+            display: none;
+        }
+        &-line {
+            background-color: $color-white;
+            display: block;
+            height: 3px;
+            width: 3.167rem;
+            border-radius: 1rem;
+            transition: all .25s;
+            & + & {
+                margin-top: 8px;
+            }
+        }
+        &--active {
+            .header__btn-line {
+                &:first-child {
+                    transform: translateY(.9rem) rotateZ(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:last-child {
+                    transform: translateY(-.9rem) rotateZ(-45deg);
+                }
+            }
+        }
+    }
+    &__nav {
+        display: none;
+        @include atSmall {
+            display: block !important;
+        }
+    }
+}

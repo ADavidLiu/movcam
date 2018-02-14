@@ -1,0 +1,43 @@
+.section-dealers {
+    &__group {
+        & + & {
+            margin-top: 4.167rem;
+            @include atSmall {
+                margin-top: 1.5625rem;
+            }
+        }
+        &-title {
+            margin-bottom: 3.333rem;
+            @include atSmall {
+                margin-bottom: 0.9375rem;
+                padding-left: 1.5625rem;
+            }
+        }
+    }
+    &__list {
+        @include atSmall {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        @include atMedium {
+            flex-wrap: nowrap;
+        }
+    }
+    &__item {
+        @include atSmall {
+            width: 50%;
+            padding: 1.5625rem;
+        }
+        @include atMedium {
+            width: 25%;
+        }
+        & + & {
+            margin-top: 4.167rem;
+            @include atSmall {
+                margin-top: 0;
+            }
+        }
+    }
+}

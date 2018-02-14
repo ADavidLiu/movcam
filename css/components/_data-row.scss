@@ -1,0 +1,44 @@
+.data-row {
+    padding: 1.667rem 0;
+    border-bottom: 1px solid $color-border-light;
+    @include atSmall {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 1.25rem 0;
+    }
+    &:first-child {
+        border-top: 1px solid $color-border-light;
+    }
+    &__key {
+        @include atSmall {
+            width: 35%;
+        }
+    }
+    &__value {
+        @include atSmall {
+            width: 65%;
+            text-align: right;
+        }
+    }
+    &--small {
+        padding-top: 0;
+        padding-bottom: 0;
+        &,
+        &:first-child {
+            border: 0;
+        }
+        .data-row {
+            &__key {
+                @include atSmall {
+                    width: 80%;
+                }
+            }
+            &__value {
+                @include atSmall {
+                    width: 20%;
+                }
+            }
+        }
+    }
+}

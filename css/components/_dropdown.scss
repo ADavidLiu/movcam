@@ -1,0 +1,37 @@
+.dropdown {
+    height: 2.75rem;
+    max-width: 162px;
+    position: relative;
+    @include atSmall {
+        height: 3.125rem;
+        max-width: 220px;
+    }
+    &__select {
+        appearance: none;
+        border: 1px solid $color-text-dark;
+        border-radius: 3px;
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
+        padding: 0 1.333rem;
+        @include atSmall {
+            padding: 0 1rem;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0.5rem;
+        font-size: 2.667rem;
+        color: $color-text-dark;
+        pointer-events: none;
+        @include atSmall {
+            right: 0.25rem;
+            font-size: 2rem;
+        }
+    }
+}

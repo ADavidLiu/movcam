@@ -1,0 +1,10 @@
+.product-box {
+    &__content {
+        display: block;
+        @include linkStates(inherit, none);
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}

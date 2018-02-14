@@ -1,0 +1,43 @@
+.section-contact {
+    @include atSmall {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__main {
+        @include atSmall {
+            width: 60%;
+        }
+    }
+    &__sub {
+        margin-top: 4rem;
+        @include atSmall {
+            width: 40%;
+            margin-top: 0;
+            margin-left: 1.875rem;
+        }
+    }
+    &__header {
+        border-bottom: 1px solid $color-border-light;
+    }
+    &__details {
+        @include atSmall {
+            width: 58%;
+        }
+    }
+    &__btns {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        .cta + .cta {
+            margin-left: 1.5625rem;
+        }
+    }
+    &__map {
+        height: 23.333rem;
+        width: 100%;
+        @include atSmall {
+            height: 17.5rem;
+        }
+    }
+}

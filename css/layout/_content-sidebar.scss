@@ -1,0 +1,21 @@
+.content-sidebar {
+    @include atSmall {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__aside {
+        @include atSmall {
+            width: 25%;
+            padding-top: 10px;
+        }
+    }
+    &__main {
+        margin-top: 4.375rem;
+        @include atSmall {
+            width: 75%;
+            margin-top: 0;
+            margin-left: 4.375rem;
+        }
+    }
+}

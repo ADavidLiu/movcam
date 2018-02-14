@@ -1,0 +1,23 @@
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include atSmall {
+        justify-content: flex-start;
+    }
+    &__item {
+        & + & {
+            margin-left: 1.667rem;
+            @include atSmall {
+                margin-left: 1.5625rem;
+            }
+        }
+    }
+    &__link {
+        font-size: 2.167rem;
+        @include linkStates($color-white, none);
+        @include atSmall {
+            font-size: 1.5rem;
+        }
+    }
+}

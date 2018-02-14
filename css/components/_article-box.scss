@@ -1,0 +1,110 @@
+.article-box {
+    position: relative;
+    display: block;
+    min-height: 27.5rem;
+    @include atSmall {
+        min-height: 0;
+        height: 20.625rem;
+        max-width: 285px;
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+        @include atSmall {
+            height: 62.5%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__copy {
+        background-color: $color-text-dark;
+        padding: 1.667rem;
+        display: block;
+        position: relative;
+        z-index: 2;
+        @include atSmall {
+            padding: 1.25rem;
+        }
+    }
+    &__bg {
+        opacity: 0.3;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        pointer-events: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transition: all .25s;
+    }
+    &--full-width {
+        max-width: none;
+    }
+    &--shorter {
+        height: auto;
+        min-height: 0;
+        max-height: 20.833rem;
+        @include atSmall {
+            max-height: 15.625rem;
+        }
+    }
+    &--bg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .article-box__copy {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 2.5rem;
+            @include atSmall {
+                bottom: 1.875rem;
+                left: 1.875rem;
+            }
+        }
+        &:hover {
+            .article-box__bg {
+                opacity: 1;
+            }
+        }
+    }
+    &--horizontal {
+        display: flex !important;
+        min-height: 460px;
+        @include atSmall {
+            width: 50%;
+            min-height: 0;
+            max-width: 590px;
+        }
+        .article-box {
+            &__copy {
+                width: 100%;
+                position: static;
+                align-self: flex-end;
+                @include atSmall {
+                    width: 50%;
+                    max-width: 335px;
+                    margin-bottom: 1.25rem;
+                    margin-left: 1.25rem;
+                    padding: 0.5rem 1rem;
+                }
+            }
+            &__link {
+                @include atSmall {
+                    position: absolute;
+                    bottom: 1.25rem;
+                    right: 1.25rem;
+                }
+            }
+        }
+    }
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}

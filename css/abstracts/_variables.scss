@@ -1,0 +1,54 @@
+// Typography
+@font-face {
+    font-family: "DINOT-Bold";
+    src: url("../fonts/DINOT-Bold.ttf");
+}
+@font-face {
+    font-family: "DINOT-Regular";
+    src: url("../fonts/DINOT-Regular.ttf");
+}
+@font-face {
+    font-family: "DINOT-Medium";
+    src: url("../fonts/DINOT-Medium.ttf");
+}
+@font-face {
+    font-family: "DINOT-Light";
+    src: url("../fonts/DINOT-Light.ttf");
+}
+@font-face {
+    font-family: "DINOT-Black";
+    src: url("../fonts/DINOT-Black.ttf");
+}
+
+$bld: "DINOT-Bold", "Helvetica", "Arial", sans-serif;
+$reg: "DINOT-Regular", "Helvetica", "Arial", sans-serif;
+$med: "DINOT-Medium", "Helvetica", "Arial", sans-serif;
+$lgt: "DINOT-Light", "Helvetica", "Arial", sans-serif;
+$blk: "DINOT-Black", "Helvetica", "Arial", sans-serif;
+
+// Colors
+$color-primary: #d1223e;
+$color-primary-dark: #a72a3e;
+$color-secondary: #292d33;
+$color-secondary-dark: #25282e;
+$color-secondary-light: #34383d;
+$color-secondary-lighter: #4F4F4F;
+$color-tertiary: #2285d1;
+
+$color-white: #ffffff;
+$color-gray: #f7f8f9;
+
+$color-border: #434245;
+$color-border-light: #e0e0e0;
+$color-border-lighter: #ebebec;
+
+$color-input-placeholder: rgba($color-secondary, .2);
+
+$color-text-gray: #848889;
+$color-text-gray-dark: #565559;
+$color-text-gray-darker: #434245;
+$color-text-gray-light: #999999;
+$color-text-dark: #262626;
+
+$color-bg-menu-inner-secondary: #404751;
+$color-bg-menu-inner-secondary-dark: #343a42;

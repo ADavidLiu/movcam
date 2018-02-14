@@ -1,0 +1,94 @@
+.footer {
+    background-color: $color-text-dark;
+    padding: 2.5rem 15px 10px 15px;
+    border-top: 4px solid $color-primary;
+    @include atSmall {
+        padding: 2.5rem 15px 1.875rem 15px;
+    }
+    &__content {
+        text-align: center;
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        flex-direction: column;
+        @include atSmall {
+            text-align: left;
+            padding-bottom: 5rem;
+            flex-direction: row;
+        }
+    }
+    &__logo {
+        margin-top: 2.5rem;
+        @include atSmall {
+            order: 1;
+            margin-top: 0;
+        }
+    }
+    &__nav {
+        @include atSmall {
+            order: 2;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+        &-title {
+            color: $color-text-gray-dark;
+            font-family: $bld;
+            font-size: 1.833rem;
+            line-height: 2.333rem;
+            text-transform: uppercase;
+            @include atSmall {
+                font-size: 1.333rem;
+                line-height: 2.875rem;
+            }
+        }
+        &-group {
+            & + & {
+                margin-top: 2.5rem;
+                @include atSmall {
+                    margin-top: 1.25rem;
+                }
+            }
+        }
+    }
+    &__column {
+        & + & {
+            margin-top: 2.5rem;
+            @include atSmall {
+                margin-top: 0;
+                margin-left: 1.125rem;
+            }
+            @include atMedium {
+                margin-left: 3.125rem;
+            }
+        }
+    }
+    &__menu {
+        margin-top: 1rem;
+        @include atSmall {
+            margin-top: 0.25rem;
+        }
+        &-item {
+            font-family: $reg;
+            font-size: 1.5rem;
+            line-height: 3.25rem;
+            color: $color-text-gray-light;
+            @include atSmall {
+                font-size: 0.875rem;
+                line-height: 2.125rem;
+            }
+            &--title {
+                line-height: 2.333rem;
+                margin-bottom: 1.333rem;
+                @include atSmall {
+                    line-height: 2.875rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        &-link {
+            @include linkStates(inherit, none);
+        }
+    }
+}

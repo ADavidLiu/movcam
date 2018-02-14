@@ -1,0 +1,25 @@
+.blog-article-box {
+    width: 100%;
+    @include atSmall {
+        width: 33.333%;
+    }
+    & + & {
+        margin-top: 3.125rem;
+        @include atSmall {
+            margin-top: 0;
+            margin-left: 3.125rem;
+        }
+    }
+    &__content {
+        text-align: center;
+        display: block;
+        @include linkStates(inherit, none);
+        &--align-left {
+            text-align: left;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}

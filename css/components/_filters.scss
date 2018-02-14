@@ -1,0 +1,107 @@
+.filters {
+    &__title {
+        font-size: 2rem;
+        color: $color-secondary;
+        font-family: $med;
+        margin-bottom: 2.9167rem;
+        @include atSmall {
+            font-size: 1.5rem;
+            margin-bottom: 2.1875rem;
+        }
+    }
+    &__content {
+        border-top: 2px solid $color-secondary;
+        border-bottom: 2px solid $color-secondary;
+    }
+    &__group {
+        padding: 1.333rem 0;
+        @include atSmall {
+            padding: 1rem 0;
+        }
+        & + & {
+            border-top: 1px solid $color-border-light;
+        }
+        &-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+        &-input {
+            display: none;
+            &:checked {
+                & + .filters__group-label {
+                    .filters__icon {
+                        transform: rotateZ(90deg);
+                        &-line {
+                            &:before {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+                & ~ .filters__list {
+                    max-height: 10vh;
+                }
+            }
+        }
+        &-title {
+            font-family: $med;
+            font-size: 1.667rem;
+            color: $color-secondary;
+            @include atSmall {
+                font-size: 1.25rem;
+            }
+        }
+    }
+    &__list {
+        max-height: 0;
+        overflow: hidden;
+        transition: all .25s;
+    }
+    &__item {
+        &:first-child {
+            margin-top: 10px;
+        }
+    }
+    &__icon {
+        display: block;
+        position: relative;
+        width: 1.667rem;
+        height: 1.667rem;
+        transition: all .25s;
+        transform-origin: 50% 50%;
+        @include atSmall {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+        &-line {
+            height: 1.667rem;
+            width: 3px;
+            background-color: $color-secondary;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include atSmall {
+                height: 1.25rem;
+            }
+            &:before {
+                content: "";
+                height: 3px;
+                width: 1.667rem;
+                background-color: $color-secondary;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all .25s;
+                @include atSmall {
+                    width: 1.25rem;
+                }
+            }
+        }
+    }
+}

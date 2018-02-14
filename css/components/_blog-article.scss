@@ -1,0 +1,15 @@
+.blog-article {
+    padding-bottom: 3.333rem;
+    @include atSmall {
+        padding-bottom: 2.5rem;
+    }
+    &__content {
+        border-bottom: 1px solid $color-border-light;
+        & > * {
+            margin-bottom: 3.333rem;
+            @include atSmall {
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+}

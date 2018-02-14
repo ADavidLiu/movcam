@@ -1,0 +1,32 @@
+.subheader {
+    background-color: $color-text-dark;
+    padding: 1rem 15px;
+    display: none;
+    @include atSmall {
+        display: block;
+        padding: 0.75rem 15px;
+    }
+    &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__item {
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        line-height: 1.875rem;
+        font-family: $bld;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        @include linkStates($color-text-gray-light, none);
+        & + & {
+            margin-left: 1.875rem;
+        }
+        &-icon {
+            font-size: 1.25rem;
+            line-height: 1.875rem;
+            margin-right: 0.25rem;
+        }
+    }
+}

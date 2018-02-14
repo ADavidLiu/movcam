@@ -1,0 +1,11 @@
+.section-support {
+    &__group {
+        & + & {
+            border-top: 1px solid $color-border-light;
+            margin-top: 3.333rem;
+            @include atSmall {
+                margin-top: 2.5rem;
+            }
+        }
+    }
+}

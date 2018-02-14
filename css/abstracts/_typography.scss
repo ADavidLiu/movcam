@@ -1,0 +1,214 @@
+.heading-primary {
+    color: $color-white;
+    font-family: $reg;
+    font-size: 3.4167rem;
+    line-height: 5.167rem;
+    letter-spacing: -0.02em;
+    @include atSmall {
+        font-size: 2.5625rem;
+        line-height: 3.875rem;
+    }
+    &--color-primary {
+        color: $color-primary;
+    }
+    &--color-dark {
+        color: $color-text-dark;
+    }
+    &--color-secondary {
+        color: $color-secondary;
+    }
+    &--line-height-big {
+        line-height: 4.333rem !important;
+        @include atSmall {
+            line-height: 3.25rem !important;
+        }
+    }
+    &--small {
+        font-size: 2.833rem;
+        line-height: 2.833rem;
+        @include atSmall {
+            font-size: 2.125rem;
+            line-height: 2.125rem;
+        }
+    }
+    &--med {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        @include atSmall {
+            font-size: 2.625rem;
+            line-height: 2.625rem;
+        }
+    }
+    &--big {
+        font-size: 3.75rem;
+        line-height: 3.75rem;
+        @include atSmall {
+            font-size: 2.8125rem;
+            line-height: 2.8125rem;
+        }
+    }
+    &--title {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        @include atSmall {
+            letter-spacing: 0.25em;
+            font-size: 3.4375rem;
+            line-height: 3.4375rem;
+        }
+    }
+}
+
+.heading-secondary {
+    color: $color-secondary;
+    font-family: $bld;
+    font-size: 2.9167rem;
+    line-height: 4.333rem;
+    @include atSmall {
+        font-size: 2.1875rem;
+        line-height: 3.25rem;
+    }
+    &--med {
+        font-size: 2.8333rem;
+        line-height: 4.333rem;
+        @include atSmall {
+            font-size: 2.125rem;
+            line-height: 3.25rem;
+        }
+    }
+}
+
+.title {
+    font-family: $med;
+    color: $color-text-dark;
+    font-size: 1.667rem;
+    line-height: 2.25rem;
+    @include atSmall {
+        font-size: 1.25rem;
+        line-height: 1.6875rem;
+    }
+    &--med {
+        font-size: 1.9167rem;
+        @include atSmall {
+            font-size: 1.4375rem;
+        }
+    }
+    &--color-primary {
+        color: $color-primary;
+    }
+    &--color-white {
+        color: $color-white;
+    }
+}
+
+.paragraph {
+    font-size: 1.5rem;
+    color: $color-text-gray-light;
+    font-family: $reg;
+    @include atSmall {
+        font-size: 1.125rem;
+    }
+    &__icon {
+        margin-left: 5px;
+        transition: all .25s;
+        &--color-gray {
+            color: $color-text-gray-light;
+        }
+        &--color-white {
+            color: $color-white;
+        }
+    }
+    &--icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &--link {
+        @include linkStates($color-text-gray-light, none);
+    }
+    &--smaller {
+        font-size: 1.25rem;
+        @include atSmall {
+            font-size: 0.9375rem;
+        }
+    }
+    &--small {
+        font-size: 1.333rem;
+        @include atSmall {
+            font-size: 1rem;
+        }
+    }
+    &--med {
+        font-size: 1.5rem;
+        @include atSmall {
+            font-size: 1.125rem;
+        }
+    }
+    &--big {
+        font-size: 1.667rem;
+        line-height: 2.5rem;
+        letter-spacing: -0.02em;
+        @include atSmall {
+            font-size: 1.25rem;
+            line-height: 1.875rem;
+        }
+    }
+    &--bigger {
+        font-size: 1.833rem;
+        @include atSmall {
+            font-size: 1.375rem;
+        }
+    }
+    &--featured {
+        font-size: 2.9167rem;
+        line-height: 3.9167rem;
+        @include atSmall {
+            font-size: 2.1875rem;
+            line-height: 2.9375rem;
+        }
+    }
+    &--title {
+        text-transform: uppercase;
+    }
+    &--text-bold {
+        font-family: $bld;
+    }
+    &--text-med {
+        font-family: $med;
+    }
+    &--color-secondary {
+        color: $color-secondary;
+        @include linkStates($color-secondary, none);
+    }
+    &--color-white {
+        color: $color-white;
+        @include linkStates($color-white, none);
+    }
+    &--color-dark {
+        color: $color-text-dark;
+        @include linkStates($color-text-dark, none);
+    }
+    &--color-border {
+        color: $color-border;
+        @include linkStates($color-border, none);
+    }
+    &--color-primary {
+        color: $color-primary;
+        @include linkStates($color-primary, none);
+    }
+    &--color-tertiary {
+        color: $color-tertiary;
+        @include linkStates($color-tertiary, none);
+    }
+    &--color-gray-darker {
+        color: $color-text-gray-darker;
+        @include linkStates($color-text-gray-darker, none);
+    }
+    &--underline {
+        &:link,
+        &:hover,
+        &:active,
+        &:visited {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.slider {
+    position: relative;
+    &__banner {
+        max-height: 385px;
+        @include atSmall {
+            max-height: none;
+        }
+    }
+    &__arrow {
+        font-size: 4rem;
+        color: $color-white;
+        position: absolute;
+        z-index: 2;
+        top: 27%;
+        transform: translateY(-27%);
+        cursor: pointer;
+        @include atSmall {
+            font-size: 5rem;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+        &--prev {
+            left: 0;
+            @include atSmall {
+                left: 2.5rem;
+            }
+        }
+        &--next {
+            right: 0;
+            @include atSmall {
+                right: 2.5rem;
+            }
+        }
+    }
+    .slick {
+        &-dots {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -55%);
+            @include atSmall {
+                top: auto;
+                bottom: 1.875rem;
+                transform: translateX(-50%);
+            }
+            li {
+                cursor: pointer;
+                float: left;
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                border: 1px solid $color-text-gray-light;
+                transition: all .25s;
+                &.slick-active {
+                    background-color: $color-white;
+                    border-color: $color-white;
+                }
+                & + li {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

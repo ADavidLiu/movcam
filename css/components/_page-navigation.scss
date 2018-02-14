@@ -1,0 +1,33 @@
+.page-navigation {
+    border-bottom: 1px solid $color-border-light;
+    &__list {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+    &__item {
+        padding: 0 10px 1.5rem 10px;
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+        margin-bottom: -1px;
+        @include atSmall {
+            width: auto;
+            padding: 0 10px 1.125rem 10px;
+        }
+        & + & {
+            @include atSmall {
+                margin-left: 1.875rem;
+            }
+        }
+        &--active {
+            border-bottom: 4px solid $color-primary;
+            .page-navigation__link {
+                @include linkStates($color-primary, none);
+            }
+        }
+    }
+    &__link {
+        @include linkStates($color-secondary, none);
+    }
+}

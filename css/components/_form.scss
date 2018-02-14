@@ -1,0 +1,55 @@
+.form {
+    &__label {
+        font-size: 1.667rem;
+        margin-bottom: 0.8333rem;
+        font-family: $reg;
+        color: $color-secondary;
+        @include atSmall {
+            font-size: 1.25rem;
+            margin-bottom: 0.625rem;
+        }
+    }
+    &__input {
+        background-color: $color-gray;
+        min-height: 3.75rem;
+        font-family: $med;
+        color: $color-text-dark;
+        font-size: 1.5rem;
+        width: 100%;
+        padding: 0 1.667rem;
+        @include atSmall {
+            min-height: 3.125rem;
+            font-size: 1.125rem;
+            padding: 0 1.25rem;
+        }
+        &::placeholder {
+            color: $color-input-placeholder;
+        }
+        &--dropdown {
+            border: 0;
+            resize: none;
+            padding: 1.667rem;
+            min-height: 11.25rem;
+            @include atSmall {
+                padding: 1.25rem;
+                min-height: 8.4375rem;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &--line {
+        @include atSmall {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+        .form__input {
+            @include atSmall {
+                width: auto;
+                flex-grow: 1;
+            }
+        }
+    }
+}
